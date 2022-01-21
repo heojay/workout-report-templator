@@ -68,3 +68,10 @@ ${muscleCondition}`;
 </ul>
 
 <button on:click={copyToClipboard}>Copy to Clipboard</button>
+
+<style>
+	input,
+	textarea {
+		font-size: 16px;
+	}
+</style>
