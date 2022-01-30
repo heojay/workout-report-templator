@@ -1,0 +1,25 @@
+// Import the typography styles.
+//
+// MDC Typography
+//
+@use '@material/typography/mdc-typography';
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	padding: 24px;
+}
+
+.paper-container {
+	padding: 24px;
+	background-color: var(--mdc-theme-background, #f8f8f8);
+}
+.smui-paper {
+	margin: 0 auto 24px;
+}

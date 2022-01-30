@@ -7,3 +7,5 @@ node_modules
 .env
 .env.*
 !.env.example
+/static/smui.css
+/static/smui-dark.css
