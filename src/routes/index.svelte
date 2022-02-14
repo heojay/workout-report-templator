@@ -48,8 +48,12 @@ ${musclePainMessage}
 ${muscleCondition}`;
 	}
 
-	const copyToClipboard = () => {
-		navigator.clipboard.writeText(getMessage()).then(() => alert('복사되었습니다.'));
+	const shareReport = () => {
+		if (navigator.share) {
+			navigator.share({ text: getMessage() });
+		} else {
+			navigator.clipboard.writeText(getMessage()).then(() => alert('클립보드에 복사되었습니다.'));
+		}
 	};
 </script>
 
@@ -131,9 +135,9 @@ ${muscleCondition}`;
 </div>
 <div class="container">
 	<FormField align="end" style="display: flex;"
-		><Button on:click={copyToClipboard} variant="raised">
+		><Button on:click={shareReport} variant="raised">
 			<Icon class="material-icons">content_paste</Icon>
-			<Label>클립보드에 복사하기</Label></Button
+			<Label>공유하기</Label></Button
 		>
 	</FormField>
 </div>
